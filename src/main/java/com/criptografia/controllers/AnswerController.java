@@ -15,14 +15,14 @@ public class AnswerController {
     private AnswerService answerService;
 
     @GetMapping
-    public boolean decodificaCasas(){
+    public Answer decodificaCasas(){
         Answer answer = answerService.recuperaAnswer();
         String decifra = answerService.decodificaAnswer(answer.getCifrado(), answer.getNumero_casas());
         answer.setDecifrado(decifra);
         String sha1 = answerService.resumoAnswer(decifra);
         answer.setResumo_criptografico(sha1);
-        ResponseEntity<Answer> resultado = answerService.enviaAnswer(answer);
+        //ResponseEntity<Answer> resultado = answerService.enviaAnswer(answer);
 
-        return true;
+        return answer;
     }
 }
