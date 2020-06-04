@@ -98,7 +98,7 @@ public class AnswerService {
         jsonObj.put("token", answer.getToken());
         jsonObj.put("cifrado", answer.getCifrado());
         jsonObj.put("decifrado", answer.getDecifrado());
-        jsonObj.put("resumo_criptogratico", answer.getResumo_criptografico());
+        jsonObj.put("resumo_criptografico", answer.getResumo_criptografico());
 
         FileWriter writeFile = null;
 
